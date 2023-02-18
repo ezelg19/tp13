@@ -1,0 +1,22 @@
+<form style="margin:2.5% 30%" action='/auth' method="post">
+    {{#if expiro}}
+    <div class="form-outline mb-4">
+        <FONT SIZE=5>Session Expirada</FONT>
+    </div>
+    {{/if}}
+    {{#if iniciar}}
+    <div class="form-outline mb-4">
+        <FONT SIZE=5>Primero inicie session</FONT>
+    </div>
+    {{/if}}
+    ir a <a href="/register">Registrarse</a>
+    <div class="form-outline mb-4">
+        <input type="text" id="mail" name="mail" class="form-control" />
+        <label class="form-label" for="form2Example2">Email</label>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="password" id="password" name="password" class="form-control" />
+        <label class="form-label" for="form2Example2">Contraseña</label>
+    </div>
+    <input type="submit" class="btn btn-primary btn-block mb-4" value="Sign In">
+</form>

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <div style="display:table; width:700px;">
+        <div style="width:500px; margin: 0.5%; display:inline">
+            <FONT SIZE=7>Bienvenido {{alias}}</FONT>
+        </div>
+        <form class="form-inline" style="margin-left: 100px; display:inline;text" action="/logout" , method="post">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Desconectar</button>
+        </form>
+    </div>
+</nav>
+
+<h1> Cargar Productos </h1>
+<form onsubmit="return addArray(this)">
+    <label style="margin: 0.5%" for="title">Title</label></br>
+    <input type="text" name="title" id="title"></br></br>
+    <label style="margin: 0.5%" for="price">Price</label></br>
+    <input type="text" name="price" id="price"></br></br>
+    <label style="margin: 0.5%" for="thumbnail">Thumbnail</label></br>
+    <input type="file" name="thumbnail" id="thumbnail"></br></br>
+    <input type="submit" value="Save">
+</form>
+</br>
+<div id="table">
+    <table style="border-collapse: collapse;width: 100%; border:1px solid;padding:1%;">
+        <thead class='thead-dark'>
+            <tr>
+                <th scope='col'>ID</th>
+                <th scope='col'>Title</th>
+                <th scope='col'>Price</th>
+                <th scope='col'>Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody id="array">
+        </tbody>
+    </table>
+</div>
+
+{{!-- mensajes --}}
+<div style="text-align:center; width:500px; margin: 0.5%">
+    <b style="text-align:left; margin-right:100px">Chat</b>
+</div>
+<div style="text-align:center; width:500px; margin: 0.5%">
+    <b style="text-align:left; margin-right:140px"></b>
+</div>
+
+<div id="chat">
+    <div id="mensajes"></div>
+</div>
+<form onsubmit="return addMensaje(this)">
+    <input type="text" name="mensaje" id="mensaje" placeholder="Mensaje" style="width: 440px;">
+    <input type="submit" value="Save">
+</form>
+{{!-- <form action="/mensajes" method="post">
+    <input type="text" name="mensaje" id="mensaje" placeholder="Mensaje" style="width: 440px;">
+    <button type="submit" value="Save"></button>
+</form> --}}

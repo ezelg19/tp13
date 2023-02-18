@@ -1,0 +1,33 @@
+<form style="margin:2.5% 30%" action='/register' method="post">
+  {{#if repetido}}
+  <div class="form-outline mb-4">
+    <FONT SIZE=5>Usuario ya registrado</FONT>
+  </div>
+  {{/if}}
+  ir a <a href="/auth">Iniciar session</a>
+  <div class="form-outline mb-4">
+    <input type="email" id="email" name="email" class="form-control" />
+    <label class="form-label" for="form2Example2">Email</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="name" name="name" class="form-control" />
+    <label class="form-label" for="form2Example2">Nombre</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="dir" name="dir" class="form-control" />
+    <label class="form-label" for="form2Example2">Direccion</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="edad" name="edad" class="form-control" />
+    <label class="form-label" for="form2Example2">Edad</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="password" id="password" name="password" class="form-control" />
+    <label class="form-label" for="form2Example2">Contraseña</label>
+  </div>
+  <div class="form-outline mb-4">
+      <input id="phone" type="tel" name="phone" />
+      <label class="form-label" for="form2Example2">N. Telefono</label>
+  </div>
+  <input type="submit" class="btn btn-primary btn-block mb-4" value="Register">
+</form>
